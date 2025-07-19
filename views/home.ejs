@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder & Wander</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <%- include('partials/header') %>
+
+<div class="page-wrapper">
+  <main class="blog-home">
+    <h1 class="home-heading">My Blogs</h1>
+
+    <section class="blog-list-section">
+      <% if (blogs.nomatch) { %>
+      <div class="no-blogs-message">
+          <p>No blogs found for search</p>
+        </div>
+      <% } else if(blogs && blogs.length > 0) { %>
+        <ul class="blog-list">
+          <% blogs.forEach(blog => { %>
+            <li>
+              <a href="/blog/<%= blog.id %>" class="blog-link">
+                <%= blog.title %>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <div class="no-blogs-message">
+          <p>No blogs uploaded yet.</p>
+        </div>
+      <% } %>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</div>
+
+
+
+
+</body>
+</html>

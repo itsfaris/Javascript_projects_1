@@ -1,0 +1,20 @@
+{
+  "name": "cap3",
+  "version": "1.0.0",
+  "description": "blogpage",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "blogpage"
+  ],
+  "author": "Faris Hammaji",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
